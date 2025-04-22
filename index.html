@@ -30,7 +30,7 @@
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 1400px; /* slightly wider for 5 cards */
             margin: 0 auto;
             padding: 20px;
         }
@@ -51,17 +51,10 @@
             font-weight: 700;
         }
         
-        header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
         .login-options {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* 5 cards horizontal */
+            gap: 20px;
             margin-top: 40px;
         }
         
@@ -80,43 +73,22 @@
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
         
-        .login-card.company {
-            border-top-color: #4361ee;
-        }
-        
-        .login-card.ngo {
-            border-top-color: #4cc9f0;
-        }
-        
-        .login-card.school {
-            border-top-color: #7209b7;
-        }
-        
-        .login-card.hospital {
-            border-top-color: #f72585;
-        }
+        .login-card.company { border-top-color: #4361ee; }
+        .login-card.ngo { border-top-color: #4cc9f0; }
+        .login-card.school { border-top-color: #7209b7; }
+        .login-card.hospital { border-top-color: #f72585; }
+        .login-card.workspace { border-top-color: #3a0ca3; }
         
         .login-icon {
             font-size: 3.5rem;
             margin-bottom: 20px;
-            color: var(--primary);
         }
         
-        .login-card.company .login-icon {
-            color: #4361ee;
-        }
-        
-        .login-card.ngo .login-icon {
-            color: #4cc9f0;
-        }
-        
-        .login-card.school .login-icon {
-            color: #7209b7;
-        }
-        
-        .login-card.hospital .login-icon {
-            color: #f72585;
-        }
+        .login-card.company .login-icon { color: #4361ee; }
+        .login-card.ngo .login-icon { color: #4cc9f0; }
+        .login-card.school .login-icon { color: #7209b7; }
+        .login-card.hospital .login-icon { color: #f72585; }
+        .login-card.workspace .login-icon { color: #3a0ca3; }
         
         .login-card h2 {
             margin-bottom: 15px;
@@ -148,37 +120,20 @@
             transform: translateY(-2px);
         }
         
-        .btn-company {
-            background: #4361ee;
-        }
+        .btn-company { background: #4361ee; }
+        .btn-company:hover { background: #3a56d4; }
         
-        .btn-company:hover {
-            background: #3a56d4;
-        }
+        .btn-ngo { background: #4cc9f0; }
+        .btn-ngo:hover { background: #3ab5dc; }
         
-        .btn-ngo {
-            background: #4cc9f0;
-        }
+        .btn-school { background: #7209b7; }
+        .btn-school:hover { background: #5f079a; }
         
-        .btn-ngo:hover {
-            background: #3ab5dc;
-        }
+        .btn-hospital { background: #f72585; }
+        .btn-hospital:hover { background: #e5177a; }
         
-        .btn-school {
-            background: #7209b7;
-        }
-        
-        .btn-school:hover {
-            background: #5f079a;
-        }
-        
-        .btn-hospital {
-            background: #f72585;
-        }
-        
-        .btn-hospital:hover {
-            background: #e5177a;
-        }
+        .btn-workspace { background: #3a0ca3; }
+        .btn-workspace:hover { background: #2c0785; }
         
         footer {
             text-align: center;
@@ -189,17 +144,8 @@
         }
         
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            
-            header p {
-                font-size: 1rem;
-            }
-            
-            .login-options {
-                grid-template-columns: 1fr;
-            }
+            header h1 { font-size: 2rem; }
+            .login-options { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -207,7 +153,6 @@
     <div class="container">
         <header>
             <h1>Universal Business Management Information System (UBMIS)</h1>
-           
         </header>
         
         <div class="login-options">
@@ -242,7 +187,14 @@
                 <h2>Hospital Login</h2>
                 <a href="#" class="btn btn-hospital">Login to Hospital</a>
             </div>
-           
+            
+            <div class="login-card workspace">
+                <div class="login-icon">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <h2>Staff Workspace</h2>
+                <a href="#" class="btn btn-workspace">Login to Workspace</a>
+            </div>
         </div>
         
         <footer>
